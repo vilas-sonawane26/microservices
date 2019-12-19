@@ -1,0 +1,19 @@
+spring.application.name=registration-service
+server.port=6004
+
+eureka.client.service-url.defaultZone=http://localhost:6001/eureka/
+
+
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2
+
+# Datasource
+spring.datasource.url=jdbc:h2:file:~/test
+spring.datasource.username=sa
+spring.datasource.password=
+spring.datasource.driver-class-name=org.h2.Driver
+
+
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.H2Dialect
+#spring.jpa.properties.hibernate.id.new_generator_mappings = false
+spring.jpa.properties.hibernate.format_sql = true

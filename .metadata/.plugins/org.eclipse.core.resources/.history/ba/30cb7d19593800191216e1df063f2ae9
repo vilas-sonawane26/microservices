@@ -1,0 +1,33 @@
+package com.example.demo;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class LoginController {
+	
+	@GetMapping("/login")
+	public ModelAndView showLoginPage() {
+		ModelAndView maw = new ModelAndView();
+		maw.addObject("name", "vilas");
+		maw.setViewName("login");
+		return maw;
+	}
+	
+	@PostMapping("/login")
+	public String submitLoginPage(@RequestParam("name") String name, @RequestParam("password") String password) {
+		
+		return "welcome";
+	}
+	
+	@GetMapping("/hello")
+	@ResponseBody
+	public String sayHello() {
+		return "WLCOME TO JAVA WORLD!!";
+	}
+
+}

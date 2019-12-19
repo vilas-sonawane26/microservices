@@ -1,0 +1,9 @@
+spring.application.name=edge-service
+server.port=5998
+
+eureka.client.service-url.defaultZone=http://localhost:6001/eureka/
+
+zuul.prefix=/api
+
+zuul.routes.account-service.path=/account/**
+zuul.routes.account-service.serviceId=ACCOUNT-SERVICE

@@ -1,0 +1,11 @@
+package com.example.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient("registration-service")
+public interface RegistartionClient {
+	
+	
+	public void saveNewUserRegistartion();
+
+}

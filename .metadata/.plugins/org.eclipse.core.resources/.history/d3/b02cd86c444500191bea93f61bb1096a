@@ -1,0 +1,33 @@
+package com.example.demo;
+
+import javax.validation.Valid;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.example.feign.RegistrationClient;
+
+@Controller
+public class RegistrationWebController {
+	
+	@Autowired
+    RegistrationClient registrationClient;
+	
+	private static final Logger logger = LoggerFactory.getLogger(RegistrationWebController.class);
+	
+	@PostMapping("/addNewRegistration")
+	public String addNewRegistarion(@Valid UserRegisterModel userRegisterModel)
+	{
+		logger.info("First Name >" + userRegisterModel.getFname()) ;
+		logger.info("Last Name >" + userRegisterModel.getLname()) ;
+		logger.info("User Name >" + userRegisterModel.getUsername()) ;
+		logger.info("Password >" + userRegisterModel.getPassword()) ;
+		
+		registrationClient.saveNewUserRegistration(userRegisterModel);
+		
+		return "login";
+	}
+}

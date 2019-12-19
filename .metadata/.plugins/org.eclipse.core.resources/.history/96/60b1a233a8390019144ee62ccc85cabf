@@ -1,0 +1,27 @@
+package com.example.demo;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.example.feign.RegistrationClient;
+
+@Controller
+public class RegistrationController {
+	
+	private RegistrationClient registrationClient;
+	private static final Logger logger = LoggerFactory.getLogger(RegistrationController.class);
+	
+	@PostMapping("/addNewRegistration")
+	public String addNewRegistarion(UserRegisterModel userRegisterModel)
+	{
+		logger.info("First Name >" + userRegisterModel.getFname()) ;
+		logger.info("Last Name >" + userRegisterModel.getLname()) ;
+		logger.info("User Name >" + userRegisterModel.getUsername()) ;
+		logger.info("Password >" + userRegisterModel.getPassword()) ;
+		
+		
+		return "login";
+	}
+}

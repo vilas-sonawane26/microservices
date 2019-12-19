@@ -1,0 +1,20 @@
+package com.example.demo;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class JavaTester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Map m = new HashMap();
+		m.put(null, "test");
+		m.put(null, "abc");
+		
+		System.out.println(m.size());
+		
+
+	}
+
+}

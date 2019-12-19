@@ -1,0 +1,14 @@
+package com.example.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+@FeignClient("registration-service")
+public interface RegistrationClient {
+	
+	@PostMapping(value="/RegistrationService/addNewUserRegistration", consumes=MediaType.APPLICATION_JSON_VALUE)
+	public void saveNewUserRegistration(@RequestBody UserRegisterModel userRegisterModel);
+
+}

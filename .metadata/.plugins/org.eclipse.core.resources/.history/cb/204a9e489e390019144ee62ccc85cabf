@@ -1,0 +1,12 @@
+package com.example.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@FeignClient("registration-service")
+public interface RegistrationClient {
+	
+	@PostMapping("/save")
+	public void saveNewUserRegistartion();
+
+}

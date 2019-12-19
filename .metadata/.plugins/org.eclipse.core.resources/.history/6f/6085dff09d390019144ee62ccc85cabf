@@ -1,0 +1,6 @@
+package com.example.feign;
+
+@FeignClient("name")
+public interface RegistartionClient {
+
+}

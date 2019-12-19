@@ -1,0 +1,21 @@
+package com.example.demo;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class JavaTester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Map m = new LinkedHashMap();
+		m.put(null, null);
+		m.put(null, null);
+		
+		System.out.println(m.get(null));
+		
+
+	}
+
+}

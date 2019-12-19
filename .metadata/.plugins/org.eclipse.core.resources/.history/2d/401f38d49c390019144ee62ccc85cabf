@@ -1,0 +1,6 @@
+package com.example.feign;
+
+@FeignCleint
+public interface RegistartionService {
+
+}

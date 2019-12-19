@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="webapp"/>
+<aop-project name="AccountService"/>
+<aop-project name="edgeService"/>
+<aop-project name="eureka"/>
+<aop-project name="CustomerService"/>
+<aop-project name="registrationService"/>
+</aop-reference-model>
